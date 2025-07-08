@@ -1,5 +1,3 @@
-# グローバーのアルゴリズムの解説付き実装（3量子ビット）
-
 from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import plot_histogram, plot_bloch_multivector
 from qiskit.quantum_info import Statevector
