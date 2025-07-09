@@ -17,7 +17,7 @@ qc.h(range(n)) # 量子回路 qc において、0番から n-1 番までのす�
 '''
 
 # 状態ベクトルを可視化（初期化後）
-sv = Statevector.from_instruction(qc)
+sv = Statevector.from_instruction(qc) # 量子回路 qc を理想的に実行したときに得られる量子状態（複素数のベクトル）を計算して、それを sv に保存する
 print("初期状態ベクトル（全状態が等確率の重ね合わせ）:")
 display(sv.draw(output='text'))
 
