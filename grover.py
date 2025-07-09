@@ -9,7 +9,12 @@ target_state = '101'  # 正解、つまり、探索対象のビット列
 
 # --- ① 初期化（全ビットにHadamard） ---
 qc = QuantumCircuit(n, n) # 3量子ビットの量子回路を定義し、それぞれの量子ビットの測定結果を保存するために、3つの古典ビットも用意している。
-qc.h(range(n))
+qc.h(range(n)) # 量子回路 qc において、0番から n-1 番までのすべての量子ビットにHadamardゲートを適用する。
+'''
+ for i in range(n):
+    qc.h(i)
+と同じ意味。
+'''
 
 # 状態ベクトルを可視化（初期化後）
 sv = Statevector.from_instruction(qc)
