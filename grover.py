@@ -45,7 +45,7 @@ oracle.h(n-1)
 oracle.mcx(list(range(n-1)), n-1)  # 多制御NOT
 oracle.h(n-1)
 
-
+# 再度 Xゲート で元に戻す
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
         oracle.x(i)
