@@ -38,9 +38,14 @@ oracle = QuantumCircuit(n) # 新しい量子回路 oracle を定義（3量子ビ
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
         oracle.x(i)
+
+
+# 指定した状態（正解）にだけ -1 の位相を与える
 oracle.h(n-1)
 oracle.mcx(list(range(n-1)), n-1)  # 多制御NOT
 oracle.h(n-1)
+
+
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
         oracle.x(i)
