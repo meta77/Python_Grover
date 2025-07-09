@@ -21,7 +21,16 @@ sv = Statevector.from_instruction(qc) # 量子回路 qc を理想的に実行し
 print("初期状態ベクトル（全状態が等確率の重ね合わせ）:")
 display(sv.draw(output='text'))
 
+
+
+
+
 # --- ② オラクル（target_stateに位相反転） ---
+
+# グローバーのアルゴリズムでは、探索対象である状態（たとえば '101'）だけに−1をかける（＝位相を反転）して、
+# その後の処理でその状態の確率振幅を「増幅」する。
+
+
 oracle = QuantumCircuit(n)
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
