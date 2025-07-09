@@ -31,7 +31,7 @@ display(sv.draw(output='text'))
 # その後の処理でその状態の確率振幅を「増幅」する。
 
 
-oracle = QuantumCircuit(n)
+oracle = QuantumCircuit(n) # 新しい量子回路 oracle を定義（3量子ビット） 「正解にだけ反応する関数」 を構築する回路。
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
         oracle.x(i)
