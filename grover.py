@@ -49,6 +49,8 @@ oracle.h(n-1)
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
         oracle.x(i)
+
+# 回路に名前をつけて、メインの回路 qc に「ゲート化して挿入」
 oracle.name = "Oracle"
 qc.append(oracle.to_gate(), range(n))
 
