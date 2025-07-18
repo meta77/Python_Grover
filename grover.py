@@ -31,7 +31,7 @@ display(sv.draw(output='text'))
 
 oracle = QuantumCircuit(n) # 新しい量子回路oracleを定義 「正解にだけ反応する関数」 を構築する回路。
 
-# 正解ビット列 '101' を 一時的に |111⟩ に変換して、多制御NOTゲートで「識別」できるようにする。
+# 正解ビット列 '101' を 一時的に |111⟩ に変換する。
 # 実用とは違い、あらかじめ正解を知っているという前提で回路を作る。
 for i, bit in enumerate(reversed(target_state)):
     if bit == '0':
