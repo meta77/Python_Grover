@@ -4,8 +4,10 @@ from qiskit.quantum_info import Statevector
 import matplotlib.pyplot as plt
 
 # --- パラメータ設定 ---
-n = 3  # 量子ビット数3のとき、探索空間は8個の状態：000〜111
+n = 3  # 今回は量子ビット数3。このとき、探索空間は8個の状態：000〜111
 target_state = '101'  # 正解、つまり、探索対象のビット列
+
+
 
 # --- ① 初期化（全ビットにHadamard） ---
 qc = QuantumCircuit(n, n) # 3量子ビットの量子回路を定義し、それぞれの量子ビットの測定結果を保存するために、3つの古典ビットも用意している。
