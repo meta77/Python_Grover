@@ -57,6 +57,9 @@ for i, bit in enumerate(reversed(target_state)):
 oracle.name = "Oracle"
 qc.append(oracle.to_gate(), range(n))
 
+
+
+
 # --- ③ ディフューザー（反転増幅） ---
 diffuser = QuantumCircuit(n)
 diffuser.h(range(n))
@@ -68,6 +71,8 @@ diffuser.x(range(n))
 diffuser.h(range(n))
 diffuser.name = "Diffuser"
 qc.append(diffuser.to_gate(), range(n))
+
+
 
 # --- ④ 測定 ---
 qc.measure(range(n), range(n))
