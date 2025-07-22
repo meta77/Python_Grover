@@ -62,6 +62,7 @@ qc.append(oracle.to_gate(), range(n))
 
 # --- ③ ディフューザー（反転増幅） ---
 # 1回分の増幅
+# 今回の場合、2回の増幅操作が必要なはず。どこで2回分実施している？
 diffuser = QuantumCircuit(n)
 diffuser.h(range(n))
 diffuser.x(range(n))
