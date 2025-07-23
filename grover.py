@@ -7,8 +7,6 @@ import matplotlib.pyplot as plt
 n = 3  # 今回は量子ビット数3。このとき、探索空間は8個の状態：000〜111
 target_state = '101'  # 正解、つまり、探索対象のビット列
 
-
-
 # --- ① 初期化（全ビットにHadamard） ---
 qc = QuantumCircuit(n, n) # 3量子ビットの量子回路を定義し、それぞれの量子ビットの測定結果を保存するために、3つの古典ビットも用意している。
 qc.h(range(n)) # 量子回路 qc において、0番から n-1 番までのすべての量子ビットにHadamardゲートを適用する。
@@ -22,9 +20,6 @@ qc.h(range(n)) # 量子回路 qc において、0番から n-1 番までのす�
 sv = Statevector.from_instruction(qc) # 量子回路 qc を理想的に実行したときに得られる量子状態（複素数のベクトル）を計算して、それを sv に保存する
 print("初期状態ベクトル（全状態が等確率の重ね合わせ）:")
 display(sv.draw(output='text'))
-
-
-
 
 
 # --- ② オラクル（target_stateのみ位相反転） ---
